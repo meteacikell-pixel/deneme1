@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixwe - Size Özel Pixelli Oyunlar</title>
+    <meta name="description" content="Sevgilinize özel pixelli oyunlar tasarlıyoruz. Benzersiz, kişiselleştirilmiş dijital hediye.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Pixel Fontları -->
+    <!-- Font bağlantıları - DOĞRU SIRALAMA ÖNEMLİ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- 1. ÖNCE Press Start 2P (başlıklar için) -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<!-- 2. SONRA VT323 (ana font) -->
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- 3. EN SON Silkscreen (özel efektler için) -->
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    
+    <!-- Kendi CSS'imiz -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    
+    <!-- Pixel efekti için ek CSS -->
+    <style>
+        /* Pixel border efekti için */
+        .pixel-border {
+            border: 4px solid;
+            border-image-slice: 2;
+            border-image-width: 2;
+            border-image-outset: 0;
+            border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(255, 107, 139)" /></svg>');
+            image-rendering: pixelated;
+        }
+        
+        /* Pixel buton efekti */
+        .pixel-btn {
+            image-rendering: pixelated;
+            position: relative;
+        }
+        
+        .pixel-btn:active {
+            transform: translate(4px, 4px);
+        }
+        
+        .pixel-btn::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -4px;
+            bottom: -4px;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pixel arkaplan efekti -->
+    <div class="pixel-bg"></div>
+    
+    <!-- Üst Kısım (Header) -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fas fa-gamepad"></i></div>
+                    <span class="logo-text">PIXWE</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home" class="pixel-link">ANA SAYFA</a></li>
+                    <li><a href="#games" class="pixel-link">OYUNLARIMIZ</a></li>
+                    <li><a href="#process" class="pixel-link">NASIL ÇALIŞIR?</a></li>
+                    <li><a href="#faq" class="pixel-link">SSS</a></li>
+                    <li><a href="#contact" class="pixel-link">İLETİŞİM</a></li>
+                    <li><a href="gift-selection.html" class="btn-nav pixel-btn">HEMEN BAŞLA</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <div class="pixel-bar"></div>
+                    <div class="pixel-bar"></div>
+                    <div class="pixel-bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- Hero Bölümü -->
+        <section class="hero" id="home">
+            <div class="swiper heroSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-1">
+                        <div class="hero-content">
+                            <h1 class="hero-title">SEVGİLİNİZE <span class="pixel-text">PİXWE</span>   İLE EĞLENCELİ BİR DÜNYA HEDİYE EDİN</h1>
+                            <p class="hero-subtitle">Kişiselleştirilmiş oyunlar, unutulmaz anılar, ömür boyu saklanacak dijital hediye.</p>
+                            <a href="#games" class="btn-hero pixel-btn">KEŞFET</a>
+                        </div>
+                        <div class="pixel-grid"></div>
+                    </div>
+                    
+                    <div class="swiper-slide slide-2">
+                        <div class="hero-content">
+                            <h1 class="hero-title">SİZİN HİKAYENİZ, <span class="pixel-text">PIXELLİ</span> OYUNUMUZ</h1>
+                            <p class="hero-subtitle">Beraber geçirdiğiniz özel anıları interaktif bir maceraya dönüştürüyoruz.</p>
+                            <a href="#process" class="btn-hero pixel-btn">NASIL ÇALIŞIR?</a>
+                        </div>
+                        <div class="pixel-grid"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- "Size Özel Oyunlar" Tanıtım Bölümü -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro-content pixel-border">
+                    <h2 class="section-title">SİZE ÖZEL OYUNLAR, <span class="highlight">BENZERSİZ HEDİYE</span>, ÖMÜR BOYU SİZDE</h2>
+                    <p class="section-subtitle">Sevdiğiniz kişi için özel olarak tasarlanmış, pixel art stilinde, sizin hikayenizi anlatan mini oyunlar yaratıyoruz. Mükemmel doğum günü, yıldönümü veya sürpriz hediyesi!</p>
+                    <a href="#games" class="btn-primary pixel-btn">OYUNLARIMIZA GÖZ AT</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OYUNLARIMIZ Bölümü -->
+        <section class="games-section" id="games">
+            <div class="container">
+                <h2 class="section-title">OYUNLARIMIZ</h2>
+                <p class="section-subtitle">İşte sizin için tasarladığımız pixelli oyunlardan örnekler:</p>
+                
+                <div class="games-scroll-container">
+                    <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="games-scroll-wrapper">
+                        <div class="games-scroll">
+
+
+
+
+<!------------------- Oyun 1 ------------------->
+<div class="game-item">
+    <div class="game-card pixel-border">
+        <div class="game-header">
+            <div class="game-icon"><i class="fas fa-heart"></i></div>
+            <h3>1</h3>
+        </div>
+        <div class="game-preview">
+            <div class="pixel-screen">
+                <div class="image-wrapper">
+                    <img src="strestmatiksevgilim.png" alt="Strestmatik Sevgilim">
+                </div>
+            </div>
+        </div>
+        <div class="game-info">
+            <p>İlk buluşmanızın pixel art versiyonu! Cafe sahnesi, konuşma seçenekleri ve mini oyunlar.</p>
+            
+            <!-- BÜYÜK DEMO BUTONU -->
+            <div class="demo-btn-container">
+                <a href="strestmatiksevgilim/strestmatiksevgilim.html"  class="demo-btn-large pixel-btn">
+                    <i class="fas fa-play-circle"></i> DEMO'YU DENE
+                </a>
+            </div>
+            
+            <div class="game-tags">
+                <span class="game-tag">ROMANTİK</span>
+                <span class="game-tag">BULUŞMA</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!------------------- Oyun 2 ------------------->
+<div class="game-item">
+    <div class="game-card pixel-border">
+        <div class="game-header">
+            <div class="game-icon"><i class="fas fa-heart"></i></div>
+            <h3>2</h3>
+        </div>
+        <div class="game-preview">
+            <div class="pixel-screen">
+                <div class="image-wrapper">
+                    <img src="strestmatiksevgilim.png" alt="Strestmatik Sevgilim">
+                </div>
+            </div>
+        </div>
+        <div class="game-info">
+            <p>İlk buluşmanızın pixel art versiyonu! Cafe sahnesi, konuşma seçenekleri ve mini oyunlar.</p>
+            
+            <!-- BÜYÜK DEMO BUTONU -->
+            <div class="demo-btn-container">
+                <a href="strestmatiksevgilim.html" target="_blank" class="demo-btn-large pixel-btn">
+                    <i class="fas fa-play-circle"></i> DEMO'YU DENE
+                </a>
+            </div>
+            
+            <div class="game-tags">
+                <span class="game-tag">ROMANTİK</span>
+                <span class="game-tag">BULUŞMA</span>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+
+<!------------------- Oyun 3 ------------------->
+<div class="game-item">
+    <div class="game-card pixel-border">
+        <div class="game-header">
+            <div class="game-icon"><i class="fas fa-heart"></i></div>
+            <h3>3</h3>
+        </div>
+        <div class="game-preview">
+            <div class="pixel-screen">
+                <div class="image-wrapper">
+                    <img src="strestmatiksevgilim.png" alt="Strestmatik Sevgilim">
+                </div>
+            </div>
+        </div>
+        <div class="game-info">
+            <p>İlk buluşmanızın pixel art versiyonu! Cafe sahnesi, konuşma seçenekleri ve mini oyunlar.</p>
+            
+            <!-- BÜYÜK DEMO BUTONU -->
+            <div class="demo-btn-container">
+                <a href="strestmatiksevgilim.html" target="_blank" class="demo-btn-large pixel-btn">
+                    <i class="fas fa-play-circle"></i> DEMO'YU DENE
+                </a>
+            </div>
+            
+            <div class="game-tags">
+                <span class="game-tag">ROMANTİK</span>
+                <span class="game-tag">BULUŞMA</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!------------------- Oyun 4 ------------------->
+<div class="game-item">
+    <div class="game-card pixel-border">
+        <div class="game-header">
+            <div class="game-icon"><i class="fas fa-heart"></i></div>
+            <h3>4</h3>
+        </div>
+        <div class="game-preview">
+            <div class="pixel-screen">
+                <div class="image-wrapper">
+                    <img src="strestmatiksevgilim.png" alt="Strestmatik Sevgilim">
+                </div>
+            </div>
+        </div>
+        <div class="game-info">
+            <p>İlk buluşmanızın pixel art versiyonu! Cafe sahnesi, konuşma seçenekleri ve mini oyunlar.</p>
+            
+            <!-- BÜYÜK DEMO BUTONU -->
+            <div class="demo-btn-container">
+                <a href="strestmatiksevgilim.html" target="_blank" class="demo-btn-large pixel-btn">
+                    <i class="fas fa-play-circle"></i> DEMO'YU DENE
+                </a>
+            </div>
+            
+            <div class="game-tags">
+                <span class="game-tag">ROMANTİK</span>
+                <span class="game-tag">BULUŞMA</span>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+
+
+<!------------------- Oyun 5 ------------------->
+<div class="game-item">
+    <div class="game-card pixel-border">
+        <div class="game-header">
+            <div class="game-icon"><i class="fas fa-heart"></i></div>
+            <h3>5</h3>
+        </div>
+        <div class="game-preview">
+            <div class="pixel-screen">
+                <div class="image-wrapper">
+                    <img src="strestmatiksevgilim.png" alt="Strestmatik Sevgilim">
+                </div>
+            </div>
+        </div>
+        <div class="game-info">
+            <p>İlk buluşmanızın pixel art versiyonu! Cafe sahnesi, konuşma seçenekleri ve mini oyunlar.</p>
+            
+            <!-- BÜYÜK DEMO BUTONU -->
+            <div class="demo-btn-container">
+                <a href="strestmatiksevgilim.html" target="_blank" class="demo-btn-large pixel-btn">
+                    <i class="fas fa-play-circle"></i> DEMO'YU DENE
+                </a>
+            </div>
+            
+            <div class="game-tags">
+                <span class="game-tag">ROMANTİK</span>
+                <span class="game-tag">BULUŞMA</span>
+            </div>
+        </div>
+    </div>
+</div>
+         
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    
+                    <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                
+<!-- index.html dosyasında, games-indicator div'i kapandıktan sonra ekleyin -->
+
+<!-- OYUNLARIMIZ bölümünün sonuna ekle -->
+</div> <!-- games-indicator div'inin kapanışından sonra -->
+
+<!--hediye et KONTEYNERİ -->
+<div class="demo-container">
+    <a href="gift-selection.html" class="demo-main-btn pixel-btn">
+        <i class="fas fa-gamepad"></i>
+        <span class="demo-text">Hemen Hediye Et</span>
+        <span class="demo-subtext">sevdiklerini mutlu et</span>
+    </a>
+    
+    <p class="demo-info">
+        <i class="fas fa-info-circle"></i>
+        Demo sürümümüzü ücretsiz deneyebilirsiniz. Size özel tasarlanmış versiyon için hemen hediye et butonuna tıkla ve eşsiz hediyen hazırlansın.
+    </p>
+</div>
+
+</div> <!-- container kapanışı -->
+
+
+        <!-- Nasıl Çalışır? Süreci -->
+        <section class="process-section" id="process">
+            <div class="container">
+                <h2 class="section-title">SİZİN İÇİN <span class="highlight">NASIL TASARLANIYOR?</span></h2>
+                <p class="section-subtitle">Özel oyununuzu yaratma sürecimiz:</p>
+                
+                <div class="process-steps">
+                    <div class="step pixel-border">
+                        <div class="step-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3>HİKAYENİ ANLAT</h3>
+                        <p>Bize özel hikayenizi seçtiğiniz oyunun gereksnimlerine göre anlatın. Bizde süsleyip sizlerle kavuşturalım</p>
+                    </div>
+                    
+                    <div class="step pixel-border">
+                        <div class="step-icon"><i class="fas fa-palette"></i></div>
+                        <h3>HİKAYENİZİ OYUNUMZA EKLİYORUZ</h3>
+                        <p>Taslakları oluşturup size gösteriyoruz. Karakterler, mekanlar ve sizin hikayenize özel olarak tasarlanıyor.</p>
+                    </div>
+                    
+                    <div class="step pixel-border">
+                        <div class="step-icon"><i class="fas fa-magic"></i></div>
+                        <h3>OYUNU </h3>
+                        <p>Özel diyaloglar, gizli mesajlar, kişisel şakalar ve sadece ikinizin anlayacağı referansları ekliyoruz.</p>
+                    </div>
+                    
+                    <div class="step pixel-border">
+                        <div class="step-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3>TESLİM & OYNAMA ZAMANI!</h3>
+                        <p>Oyununuzu web linki veya özel bir paket olarak teslim ediyoruz. Hemen oynamaya başlayabilir ve sonsuza kadar sizde kalır!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ana Eylem Butonu -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content pixel-border">
+                    <h2 class="cta-title">SEVDİĞİNİZ İNSANA SÜRPRİZ YAPMAYA HAZIR MISINIZ?</h2>
+                    <p class="cta-subtitle">Dijital ve özel bir hediye ile onu şaşırtın. Ömür boyu saklayabileceği bir anı yaratın.</p>
+                    <a href="#contact" class="btn-cta pixel-btn">HEMEN HEDİYE ET</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sıkça Sorulan Sorular -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">SIKÇA SORULAN <span class="highlight">SORULAR</span></h2>
+                <p class="section-subtitle">Merak ettiğiniz soruların cevapları burada:</p>
+                
+                <div class="faq-container">
+                    <!-- FAQ item'lar aynı kalacak, sadece CSS'te pixel border eklenecek -->
+                    <div class="faq-item pixel-border">
+                        <button class="faq-question">
+                            <span>OYUNU NASIL KİŞİSELLEŞTİRİYORSUNUZ?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Size özel bir form gönderiyoruz. Bu formda hikayenizi, özel anılarınızı, inside joke'larınızı, favori renklerinizi, karakter özelliklerinizi ve istediğiniz oyun mekaniklerini soruyoruz. Tüm bu bilgileri kullanarak size özel bir hikaye ve oyun dünyası oluşturuyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item pixel-border">
+                        <button class="faq-question">
+                            <span>TESLİM SÜRESİ NE KADAR?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basit oyunlar için 3-5 iş günü, daha kapsamlı ve uzun oyunlar için 7-10 iş günü gerekiyor. Acil ihtiyaçlarınız için express hizmetimiz de mevcut (ek ücretli). Süreç boyunca sizi güncellemelerle bilgilendiriyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item pixel-border">
+                        <button class="faq-question">
+                            <span>HANGİ PLATFORMLARDA OYNADILABİLİR?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oyunlarımız web tabanlı olduğu için tüm cihazlarda (bilgisayar, tablet, telefon) internet tarayıcısı üzerinden oynanabilir. Özel bir uygulama indirmenize gerek yok. Ayrıca oyunu özel bir web linki olarak gönderiyoruz, böylece hediye ettiğiniz kişi tek tıkla oyuna ulaşabilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Formu -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info pixel-border">
+                        <h2 class="section-title">İLETİŞİME <span class="highlight">GEÇİN</span></h2>
+                        <p class="section-subtitle">Özel oyununuz hakkında konuşalım!</p>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3>E-POSTA</h3>
+                                <p>info@pixwe.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h3>TELEFON</h3>
+                                <p>+90 (538) 608 21 55 </p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h3>ÇALIŞMA SAATLERİ</h3>
+                                <p>Pazartesi - Cumartesi: 10:00 - 19:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="pixel-social"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="pixel-social"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" class="pixel-social"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form pixel-border">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="ADINIZ SOYADINIZ" required class="pixel-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="E-POSTA ADRESİNİZ" required class="pixel-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="TELEFON NUMARANIZ" class="pixel-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" rows="5" placeholder="OYUNUNUZ HAKKINDA BİZE BİLGİ VERİN... (HİKAYE, KARAKTERLER, ÖZEL İSTEKLER)" class="pixel-textarea"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-form pixel-btn">GÖNDER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-gamepad"></i></div>
+                        <span class="logo-text">PIXWE</span>
+                    </a>
+                    <p class="footer-description">Sevgiyi pixellere dönüştürüyoruz. Kişiselleştirilmiş oyunlarla unutulmaz anılar yaratıyoruz.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>BAĞLANTILAR</h3>
+                    <ul>
+                        <li><a href="#home">ANA SAYFA</a></li>
+                        <li><a href="#games">OYUNLARIMIZ</a></li>
+                        <li><a href="#process">NASIL ÇALIŞIR?</a></li>
+                        <li><a href="#faq">SSS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>YASAL</h3>
+                    <ul>
+                        <li><a href="#">GİZLİLİK POLİTİKASI</a></li>
+                        <li><a href="#">KULLANIM KOŞULLARI</a></li>
+                        <li><a href="#">SÖZLEŞME İPTALİ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>İLETİŞİM</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Orta Mh. Sofoğlu Caddesi 40 SAMSUN</li>
+                        <li><i class="fas fa-phone"></i> +90 (538) 608 21 55</li>
+                        <li><i class="fas fa-envelope"></i> info@pixwe.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 <strong>PIXWE</strong>. TÜM HAKLARI SAKLIDIR. | SEVGİLİ OYUNLARI, PIXEL ART TASARIMLAR</p>
+                <div class="pixel-hearts">
+                    <span class="pixel-heart">❤</span>
+                    <span class="pixel-heart">❤</span>
+                    <span class="pixel-heart">❤</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- Kendi JS'imiz -->
+    <script src="script.js"></script>
+</body>
+</html>
